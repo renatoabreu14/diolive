@@ -9,23 +9,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/jornada")
+@RequestMapping("/jornadas")
 public class JornadaTrabalhoController {
 
     @Autowired
     JornadaTrabalhoService jornadaTrabalhoService;
 
-    @PostMapping(value = "")
+    @PostMapping
     public JornadaTrabalho create(@RequestBody JornadaTrabalho jornadaTrabalho){
         return jornadaTrabalhoService.save(jornadaTrabalho);
     }
 
-    @PutMapping(value = "")
+    @PutMapping
     public JornadaTrabalho update(@RequestBody JornadaTrabalho jornadaTrabalho){
         return jornadaTrabalhoService.update(jornadaTrabalho);
     }
 
-    @GetMapping(value = "")
+    @GetMapping
     public List<JornadaTrabalho> getJornadaTrabalhoList(){
         return jornadaTrabalhoService.findAll();
     }
