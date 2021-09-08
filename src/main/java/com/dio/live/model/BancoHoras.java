@@ -28,7 +28,6 @@ public class BancoHoras {
         private long idMovimentacao;
         private long idUsuario;
     }
-    @Id
     @EmbeddedId
     private BancoHoraId id;
     private LocalDateTime dataTrabalhada;
