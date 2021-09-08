@@ -35,5 +35,10 @@ public class JornadaTrabalhoController {
         return ResponseEntity.ok(jornadaTrabalhoService.findById(id).orElseThrow(() -> new Exception("Jornada de Trabalho não encontrada")));
     }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id") long id){
+        jornadaTrabalhoService.delete(id);
+    }
+
 
 }

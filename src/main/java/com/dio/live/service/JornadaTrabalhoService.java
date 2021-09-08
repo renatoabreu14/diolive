@@ -27,15 +27,15 @@ public class JornadaTrabalhoService {
         return jornadaTrabalhoRepository.save(jornadaTrabalho);
     }
 
-    public void delete(JornadaTrabalho jornadaTrabalho){
-        jornadaTrabalhoRepository.delete(jornadaTrabalho);
+    public void delete(Long id){
+        jornadaTrabalhoRepository.deleteById(id);
     }
 
     public List<JornadaTrabalho> findAll(){
         return jornadaTrabalhoRepository.findAll();
     }
 
-    public Optional<JornadaTrabalho> findById(long id){
+    public Optional<JornadaTrabalho> findById(Long id){
         return jornadaTrabalhoRepository.findById(id);
     }
 }
